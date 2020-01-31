@@ -1,0 +1,44 @@
+.btn{
+  padding: 5px 10px;
+  width: 80px;
+  border: none;
+  border-radius: 3px;
+  background-color: #00a3cf;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.main {
+  position: absolute;
+  top:25%;
+  left:25%;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fbfbfb;
+}
+
+ol.list-group{
+  width: 50%;
+  text-align: center;
+  margin:0 auto;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  border-width:0
+}
+
+li.list-group-item{
+  list-style-type:none;
+  padding:10px;
+  margin:0;
+  border:1px solid #ccc;
+  border-width:1px
+}
+
+.t{
+  width: 50%;
+  margin:0 auto;
+}
