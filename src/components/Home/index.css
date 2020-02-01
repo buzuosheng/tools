@@ -1,0 +1,12 @@
+.home .item {
+  width: 285px;
+  float: left;
+  margin: 0 13px 13px 0;
+  border: 1px solid #ccc;
+  background-image: -webkit-linear-gradient(top, #fff, #f9f9f9);
+  position: static;
+  border-radius: 5px;
+  transition: box-shadow .3s ease-in-out;
+
+  padding: 1rem;
+}

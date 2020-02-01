@@ -11,7 +11,7 @@ class Md5 extends React.Component<{}, {str:string, result:string}>{
     this.handleClick=this.handleClick.bind(this)
   }
 
-  handleChange(e:React.ChangeEvent<HTMLInputElement>){
+  handleChange(e:React.ChangeEvent<any>){
     this.setState({str: e.target.value})
   }
 
@@ -21,19 +21,22 @@ class Md5 extends React.Component<{}, {str:string, result:string}>{
 
   render(){
     return(
-      <div className='main'>
-        <label className='t'>要加密的字符串：
-          <input 
-                className='cronInput'
-                value={this.state.str}
-                onChange={this.handleChange} />
-          &nbsp;&nbsp;
-          <button className='btn' onClick={this.handleClick}>
+      <div className='md5-container'>
+        <div>
+          要加密的字符串：
+        </div>
+        <div>
+          <textarea
+            className='cronInput'
+            value={this.state.str}
+            onChange={this.handleChange}
+          />
+        </div>
+        <button className='btn' onClick={this.handleClick}>
           点击
-          </button>
-        </label>
+        </button>
         <h3>加密后的结果为：</h3>
-        <label className='result'>{this.state.result}</label>
+        <div className='result'>{this.state.result}</div>
       </div>
     )
   }

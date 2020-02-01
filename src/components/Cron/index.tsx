@@ -37,7 +37,7 @@ class Cron extends React.Component<{}, { value: string; arr: string[]}> {
 
   render() {
     return(
-      <div className='main'>
+      <div>
         <label className='t'>CRON表达式：
           <input 
                 className='cronInput'

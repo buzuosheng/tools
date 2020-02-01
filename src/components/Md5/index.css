@@ -9,27 +9,24 @@
   cursor: pointer;
 }
 
-.main {
-  position: absolute;
-  top:25%;
-  left:25%;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #fbfbfb;
+.md5-container {
+  text-align: left;
 }
 
+.md5-container textarea {
+  width: 66%;
+  height: 4rem;
+  padding: .5rem;
+  margin: .5rem 0;
+}
+
+.md5-container .result {
+  height: 4rem;
+  width: 96%;
+  border: 1px solid #ccc;
+}
 
 .t{
   width: 50%;
   margin:0 auto;
-}
-
-.result{
-  padding: 0 10px 0 10px;
-  margin:0;
-  border:1px solid #ccc;
-  border-width:1px
 }

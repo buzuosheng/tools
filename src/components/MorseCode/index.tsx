@@ -11,7 +11,7 @@ const MorseCode: React.FC = () => {
   const [result, setResult] = useState('')
 
   return(
-    <div className='main'>
+    <div className='morse-container'>
       <label className='t'>输入需要转码的字符串：
         <input type='text' value={code} onChange={ (e) => {setCode(e.target.value)}} />&nbsp;&nbsp;
         <button className='btn' onClick={(e) => { setResult(morse.encode(code)) }} >编码</button>
