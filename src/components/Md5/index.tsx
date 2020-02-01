@@ -27,16 +27,15 @@ class Md5 extends React.Component<{}, {str:string, result:string}>{
         </div>
         <div>
           <textarea
-            className='cronInput'
             value={this.state.str}
             onChange={this.handleChange}
           />
         </div>
-        <button className='btn' onClick={this.handleClick}>
+        <button className='md5-btn' onClick={this.handleClick}>
           点击
         </button>
         <h3>加密后的结果为：</h3>
-        <div className='result'>{this.state.result}</div>
+        <div className='md5-result'>{this.state.result}</div>
       </div>
     )
   }

@@ -1,4 +1,4 @@
-.btn{
+.morse-btn{
   padding: 5px 10px;
   width: 80px;
   border: none;
@@ -9,14 +9,20 @@
   cursor: pointer;
 }
 
-.t{
-  width: 50%;
-  margin:0 auto;
+.morse-container textarea {
+  width: 66%;
+  padding: .5rem;
+  margin: .5rem 0;
+  height: 4rem;
 }
 
-.result{
-  padding: 0 10px 0 10px;
-  margin:0;
-  border:1px solid #ccc;
-  border-width:1px
+.morse-container {
+  text-align: left;
+}
+
+.morse-result {
+  padding: .5rem;
+  width: 66%;
+  height: 4rem;
+  border: 1px solid #ccc;
 }

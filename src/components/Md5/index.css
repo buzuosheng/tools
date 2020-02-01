@@ -1,4 +1,4 @@
-.btn{
+.md5-btn{
   padding: 5px 10px;
   width: 80px;
   border: none;
@@ -20,13 +20,9 @@
   margin: .5rem 0;
 }
 
-.md5-container .result {
+.md5-result {
+  padding: .5rem;
+  width: 66%;
   height: 4rem;
-  width: 96%;
   border: 1px solid #ccc;
-}
-
-.t{
-  width: 50%;
-  margin:0 auto;
 }
