@@ -39,3 +39,7 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.tool-url {
+  overflow: hidden;
+}

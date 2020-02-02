@@ -32,7 +32,7 @@ const BinaryConvert: React.FC = () => {
           点击
       </button>
       </div>
-      <h3>程序接下来五次执行的时间</h3>
+      <h3>进制转换结果表</h3>
       <div className='bc-result'>
         <table className='res-tab'>
           <thead>
