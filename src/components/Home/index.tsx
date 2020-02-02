@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import cron from './image/cron.jpg'
 import md5 from './image/md5.jpg'
 import morse from './image/morse.jpg'
+import base64 from './image/base64.jpg'
 
 import './index.css'
 
@@ -53,8 +54,19 @@ const Home: React.FC = () => {
             <Link to='/MorseCode'>https://wuqiku.netlify.com/NorseCode</Link>
           </div>
         </div>
-        <div className='tool'>
-          第四个工具
+        <div className="tool">
+          <div className='tool-name'>
+            <Link className='tool-icon' to='/Base64'>
+              <img src={base64} alt='base64' />
+              <h3>Base64转码解码</h3>
+            </Link>
+          </div>
+          <div className='tool-info'>
+              将文字使用Base64转码解码
+          </div>
+          <div className='tool-url'>
+            <Link to='/Base64'>https://wuqiku.netlify.com/Base64</Link>
+          </div>
         </div>
         <div className='tool'>第五个工具</div>
       </div>
@@ -63,3 +75,20 @@ const Home: React.FC = () => {
 }
 
 export default Home;
+
+/*
+        <div className="tool">
+          <div className='tool-name'>
+            <Link className='tool-icon' to='/'>
+              <img src={} alt='' />
+              <h3></h3>
+            </Link>
+          </div>
+          <div className='tool-info'>
+             
+          </div>
+          <div className='tool-url'>
+            <Link to='/'>https://wuqiku.netlify.com/</Link>
+          </div>
+        </div>
+*/
