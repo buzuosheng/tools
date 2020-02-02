@@ -33,10 +33,10 @@ const Cron: React.FC = () => {
       <input
           className='cron-input'
           value={value}
-          onChange={(e) => {setValue(e.target.value)}} />
+          onChange={(e) => { setValue(e.target.value) }} />
         <button className='cron-btn' onClick={handleClick}>
           点击
-    </button>
+        </button>
       </div>
       <h3>程序接下来五次执行的时间</h3>
       <div className='cron-result'>
