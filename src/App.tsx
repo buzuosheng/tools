@@ -1,25 +1,40 @@
 import React from 'react'
 import './App.css';
+import { BrowserRouter as Router, Route, Link, useLocation } from 'react-router-dom'
+
 import Cron from './components/Cron';
 import Md5 from './components/Md5'
 import MorseCode from './components/MorseCode'
 import Home from './components/Home'
 import Base64 from './components/Base64'
 import BinaryConvert from './components/BinaryConvert'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import logo from './logo.jpg'
+
+const Header: React.FC = () => {
+  const location = useLocation()
+
+  return (
+    <div className="header">
+      <Link to='/'>
+        <img src={logo} alt='前端武器库'></img>
+      </Link>
+      <Link to='/' className={location.pathname === '/' ? 'active' : ''}>首页</Link>
+      <Link to='/cron' className={location.pathname === '/cron' ? 'active' : ''}>Cron</Link>
+      <Link to='/Md5' className={location.pathname === '/Md5' ? 'active' : ''}>MD5</Link>
+      <Link to='MorseCode' className={location.pathname === '/MorseCode' ? 'active' : ''}>MorseCode</Link>
+      <Link to='Base64' className={location.pathname === '/Base64' ? 'active' : ''}>Base64</Link>
+      <Link to='BinaryConvert' className={location.pathname === '/BinaryConvert' ? 'active' : ''}>进制转换</Link>
+    </div>
+  )
+}
 
 const App: React.FC = () => {
+  console.log(window.location.pathname)
+
   return (
     <div className='App main'>
       <Router>
-        <div className="header">
-          <Link to='/'>首页</Link>
-          <Link to='/cron'>Cron</Link>
-          <Link to='/Md5'>MD5</Link>
-          <Link to='MorseCode'>MorseCode</Link>
-          <Link to='Base64'>Base64</Link>
-          <Link to='BinaryConvert'>进制转换</Link>
-        </div>
+        <Header></Header>
         <Route path='/' exact component={Home} />
         <Route path='/cron' component={Cron} />
         <Route path='/md5' component={Md5} />
