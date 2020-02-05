@@ -1,15 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
 import './index.css'
+import Helmet from 'react-helmet'
 
 const BinaryConvert: React.FC = () => {
 
-  const [ num, setNum ] = useState('')
-  const [ num2, setNum2 ] = useState('')
-  const [ num8, setNum8 ] = useState('')
-  const [ num10, setNum10 ] = useState('')
-  const [ num16, setNum16 ] = useState('')
-  const [ num36, setNum36 ] = useState('')
+  const [num, setNum] = useState('')
+  const [num2, setNum2] = useState('')
+  const [num8, setNum8] = useState('')
+  const [num10, setNum10] = useState('')
+  const [num16, setNum16] = useState('')
+  const [num36, setNum36] = useState('')
 
   const Convert = () => {
     if (num) {
@@ -23,14 +24,19 @@ const BinaryConvert: React.FC = () => {
 
   return (
     <div className='bc-container'>
-      <div>bc表达式：
-    <input
+      <Helmet>
+        <title>进制转换 - 前端武器库</title>
+        <meta name='description' content='使用在线工具对数字进行常用的进制转换' />
+        <meta name='keywords' content='数字,在线工具,转换,进制'/>
+      </Helmet>
+      <div>输入需要转换的十进制数字：
+      <input
           className='bc-input'
           value={num}
           onChange={(e) => { setNum(e.target.value) }} />
-        <button className='bc-btn' onClick={ Convert }>
+        <button className='bc-btn' onClick={Convert}>
           点击
-      </button>
+        </button>
       </div>
       <h3>进制转换结果表</h3>
       <div className='bc-result'>

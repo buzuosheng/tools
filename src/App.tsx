@@ -8,6 +8,8 @@ import MorseCode from './components/MorseCode'
 import Home from './components/Home'
 import Base64 from './components/Base64'
 import BinaryConvert from './components/BinaryConvert'
+import DateConvert from './components/DateConvert'
+
 import logo from './logo.jpg'
 
 const Header: React.FC = () => {
@@ -21,9 +23,10 @@ const Header: React.FC = () => {
       <Link to='/' className={location.pathname === '/' ? 'active' : ''}>首页</Link>
       <Link to='/cron' className={location.pathname === '/cron' ? 'active' : ''}>Cron</Link>
       <Link to='/Md5' className={location.pathname === '/Md5' ? 'active' : ''}>MD5</Link>
-      <Link to='MorseCode' className={location.pathname === '/MorseCode' ? 'active' : ''}>MorseCode</Link>
+      <Link to='MorseCode' className={location.pathname === '/MorseCode' ? 'active' : ''}>摩尔斯电码</Link>
       <Link to='Base64' className={location.pathname === '/Base64' ? 'active' : ''}>Base64</Link>
       <Link to='BinaryConvert' className={location.pathname === '/BinaryConvert' ? 'active' : ''}>进制转换</Link>
+      <Link to='DateConvert' className={location.pathname === '/DateConvert' ? 'active' : ''}>时间戳转换</Link>
     </div>
   )
 }
@@ -41,6 +44,7 @@ const App: React.FC = () => {
         <Route path='/MorseCode' component={MorseCode} />
         <Route path='/Base64' component={Base64} />
         <Route path='/BinaryConvert' component={BinaryConvert} />
+        <Route path='/DateConvert' component={DateConvert} />
       </Router>
     </div>
   )

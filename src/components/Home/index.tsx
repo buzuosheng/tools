@@ -1,17 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
+
 import cron from './image/cron.jpg'
 import md5 from './image/md5.jpg'
 import morse from './image/morse.jpg'
 import base64 from './image/base64.jpg'
 import binaryc from './image/binaryc.jpg'
+import dateconvert from './image/dateconvert.jpg'
 
 import './index.css'
+
 
 const Home: React.FC = () => {
 
   return (
     <div className='home'>
+      <Helmet>
+        <title>前端武器库</title>
+        <meta name='description' content='前端在线工具库'/>
+        <meta name='keywords' content='前端,工具库,工具,在线' />
+      </Helmet>
       <div className="list">
         <div className="tool">
           <div className='tool-name'>
@@ -83,6 +92,21 @@ const Home: React.FC = () => {
             <Link to='/BinaryConvert'>https://wuqiku.netlify.com/BinaryConvert</Link>
           </div>
         </div>
+        <div className="tool">
+          <div className='tool-name'>
+            <Link className='tool-icon' to='DateConvert'>
+              <img src={dateconvert} alt='时间戳在线转换' />
+              <h3>时间戳转换</h3>
+            </Link>
+          </div>
+          <div className='tool-info'>
+            在线转换时间戳
+          </div>
+          <div className='tool-url'>
+            <Link to='DateConvert'>https://wuqiku.netlify.com/DateConvert</Link>
+          </div>
+        </div>
+
       </div>
     </div>
   )

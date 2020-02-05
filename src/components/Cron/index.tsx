@@ -3,6 +3,7 @@ import { useState } from 'react'
 import dayjs from 'dayjs'
 import './index.css'
 import parser from 'cron-parser'
+import Helmet from 'react-helmet'
 
 const Cron: React.FC = () => {
 
@@ -29,6 +30,11 @@ const Cron: React.FC = () => {
   }
   return (
     <div className='cron-container'>
+      <Helmet>
+        <title>crontab时间计算 - 前端武器库</title>
+        <meta name="description" content="计算定时任务的执行时间" />
+        <meta name='keywords' content="工具,cron,crontab,定时,执行时间,前端,在线" />>
+      </Helmet>
       <div>CRON表达式：
       <input
           className='cron-input'
