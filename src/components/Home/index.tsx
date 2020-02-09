@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         </div>
         <div className="tool">
           <div className='tool-name'>
-            <Link className='tool-icon' to='/MorseCode'>
+            <Link className='tool-icon' to='/morsecode'>
               <img src={morse} alt='morse' />
               <h3>摩尔斯电码</h3>
             </Link>
@@ -61,12 +61,12 @@ const Home: React.FC = () => {
             将文字信息转换成摩尔斯电码
           </div>
           <div className='tool-url'>
-            <Link to='/MorseCode'>https://wuqiku.netlify.com/NorseCode</Link>
+            <Link to='/morsecode'>https://wuqiku.netlify.com/NorseCode</Link>
           </div>
         </div>
         <div className="tool">
           <div className='tool-name'>
-            <Link className='tool-icon' to='/Base64'>
+            <Link className='tool-icon' to='/base64'>
               <img src={base64} alt='base64' />
               <h3>Base64转码解码</h3>
             </Link>
@@ -75,12 +75,12 @@ const Home: React.FC = () => {
             将文字使用Base64转码解码
           </div>
           <div className='tool-url'>
-            <Link to='/Base64'>https://wuqiku.netlify.com/Base64</Link>
+            <Link to='/base64'>https://wuqiku.netlify.com/Base64</Link>
           </div>
         </div>
         <div className="tool">
           <div className='tool-name'>
-            <Link className='tool-icon' to='/BinaryConvert'>
+            <Link className='tool-icon' to='/binaryconvert'>
               <img src={binaryc} alt='进制转换' />
               <h3>常用进制转换</h3>
             </Link>
@@ -89,12 +89,12 @@ const Home: React.FC = () => {
             常用的进制转换工具
           </div>
           <div className='tool-url'>
-            <Link to='/BinaryConvert'>https://wuqiku.netlify.com/BinaryConvert</Link>
+            <Link to='/binaryconvert'>https://wuqiku.netlify.com/BinaryConvert</Link>
           </div>
         </div>
         <div className="tool">
           <div className='tool-name'>
-            <Link className='tool-icon' to='DateConvert'>
+            <Link className='tool-icon' to='/dateconvert'>
               <img src={dateconvert} alt='时间戳在线转换' />
               <h3>时间戳转换</h3>
             </Link>
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
             在线转换时间戳
           </div>
           <div className='tool-url'>
-            <Link to='DateConvert'>https://wuqiku.netlify.com/DateConvert</Link>
+            <Link to='/dateconvert'>https://wuqiku.netlify.com/DateConvert</Link>
           </div>
         </div>
 
@@ -117,7 +117,7 @@ export default Home;
 /*
         <div className="tool">
           <div className='tool-name'>
-            <Link className='tool-icon' to=''>
+            <Link className='tool-icon' to=/>
               <img src={} alt='' />
               <h3></h3>
             </Link>
@@ -126,7 +126,7 @@ export default Home;
 
           </div>
           <div className='tool-url'>
-            <Link to=''>https://wuqiku.netlify.com/</Link>
+            <Link to=/>https://wuqiku.netlify.com/</Link>
           </div>
         </div>
 */

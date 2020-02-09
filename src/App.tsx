@@ -22,11 +22,11 @@ const Header: React.FC = () => {
       </Link>
       <Link to='/' className={location.pathname === '/' ? 'active' : ''}>首页</Link>
       <Link to='/cron' className={location.pathname === '/cron' ? 'active' : ''}>Cron</Link>
-      <Link to='/Md5' className={location.pathname === '/Md5' ? 'active' : ''}>MD5</Link>
-      <Link to='MorseCode' className={location.pathname === '/MorseCode' ? 'active' : ''}>摩尔斯电码</Link>
-      <Link to='Base64' className={location.pathname === '/Base64' ? 'active' : ''}>Base64</Link>
-      <Link to='BinaryConvert' className={location.pathname === '/BinaryConvert' ? 'active' : ''}>进制转换</Link>
-      <Link to='DateConvert' className={location.pathname === '/DateConvert' ? 'active' : ''}>时间戳转换</Link>
+      <Link to='/md5' className={location.pathname === '/md5' ? 'active' : ''}>MD5</Link>
+      <Link to='/morsecode' className={location.pathname === '/morsecode' ? 'active' : ''}>摩尔斯电码</Link>
+      <Link to='/base64' className={location.pathname === '/base64' ? 'active' : ''}>Base64</Link>
+      <Link to='/binaryconvert' className={location.pathname === '/binaryconvert' ? 'active' : ''}>进制转换</Link>
+      <Link to='/dateconvert' className={location.pathname === '/dateconvert' ? 'active' : ''}>时间戳转换</Link>
     </div>
   )
 }
@@ -41,10 +41,10 @@ const App: React.FC = () => {
         <Route path='/' exact component={Home} />
         <Route path='/cron' component={Cron} />
         <Route path='/md5' component={Md5} />
-        <Route path='/MorseCode' component={MorseCode} />
-        <Route path='/Base64' component={Base64} />
-        <Route path='/BinaryConvert' component={BinaryConvert} />
-        <Route path='/DateConvert' component={DateConvert} />
+        <Route path='/morsecode' component={MorseCode} />
+        <Route path='/base64' component={Base64} />
+        <Route path='/binaryconvert' component={BinaryConvert} />
+        <Route path='/dateconvert' component={DateConvert} />
       </Router>
     </div>
   )
