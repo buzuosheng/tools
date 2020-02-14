@@ -2,6 +2,7 @@ import React from 'react';
 import QRCode from 'qrcode.react'
 import { Button } from 'antd'
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 
 import './index.css';
 import QrControl from './QrControl'
@@ -35,6 +36,11 @@ const Qrcode: React.FC = () => {
 
   return (
     <div className='qr_main'>
+      <Helmet>
+        <title>在线生成二维码 - 前端武器库</title>
+        <meta name='description' content='在线生成二维码' />
+        <meta name='keywords' content='在线,在线工具,转码,二维码,前端,加密' />
+      </Helmet>
       <QrControl
         value={value}
         renderAs={renderAs}
