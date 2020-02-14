@@ -8,6 +8,7 @@ import morse from './image/morse.jpg'
 import base64 from './image/base64.jpg'
 import binaryc from './image/binaryc.jpg'
 import dateconvert from './image/dateconvert.jpg'
+import qrcode from './image/qrcode.jpg';
 
 import './index.css'
 
@@ -106,6 +107,49 @@ const Home: React.FC = () => {
             <Link to='/dateconvert'>https://wuqiku.netlify.com/DateConvert</Link>
           </div>
         </div>
+        <div className="tool">
+          <div className='tool-name'>
+            <Link className='tool-icon' to='/qrcode'>
+              <img src={qrcode} alt='生成二维码条形码' />
+              <h3>在线生成二维码</h3>
+            </Link>
+          </div>
+          <div className='tool-info'>
+            在线生成二维码，文字网址等
+          </div>
+          <div className='tool-url'>
+            <Link to='/qrcode'>https://wuqiku.netlify.com/</Link>
+          </div>
+        </div>
+        <div className="tool">
+          <div className='tool-name'>
+            <Link className='tool-icon' to='/'>
+              <img src={cron} alt='8' />
+              <h3>第八个工具</h3>
+            </Link>
+          </div>
+          <div className='tool-info'>
+            第八个工具
+          </div>
+          <div className='tool-url'>
+            <Link to='/'>https://wuqiku.netlify.com/</Link>
+          </div>
+        </div>
+        <div className="tool">
+        <div className='tool-name'>
+          <Link className='tool-icon' to='/'>
+            <img src={cron} alt='9' />
+            <h3>第九个工具</h3>
+          </Link>
+        </div>
+        <div className='tool-info'>
+          第九个工具
+        </div>
+        <div className='tool-url'>
+          <Link to='/'>https://wuqiku.netlify.com/</Link>
+        </div>
+      </div>
+
 
       </div>
     </div>

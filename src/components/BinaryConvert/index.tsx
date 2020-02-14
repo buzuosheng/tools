@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './index.css'
 import Helmet from 'react-helmet'
+import { Input, Button,Table } from 'antd'
 
 const BinaryConvert: React.FC = () => {
 
@@ -22,54 +23,66 @@ const BinaryConvert: React.FC = () => {
     }
   }
 
+  const dataSource = [
+    {
+      key: '1',
+      name: '二进制',
+      result: num2
+    },
+    {
+      key: '2',
+      name: '八进制',
+      result: num8
+    },
+    {
+      key: '3',
+      name: '十进制',
+      result: num10
+    },
+    {
+      key: '4',
+      name: '十六进制',
+      result: num16
+    },
+    {
+      key: '5',
+      name: '三十六进制',
+      result: num36
+    },
+  ];
+
+  const columns = [
+    {
+      title: '进制',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: '结果',
+      dataIndex: 'result',
+      key: 'result',
+    },
+  ];
+
   return (
     <div className='bc-container'>
       <Helmet>
         <title>进制转换 - 前端武器库</title>
         <meta name='description' content='使用在线工具对数字进行常用的进制转换' />
-        <meta name='keywords' content='数字,在线工具,转换,进制'/>
+        <meta name='keywords' content='数字,在线工具,转换,进制' />
       </Helmet>
       <div>输入需要转换的十进制数字：
-      <input
-          className='bc-input'
+      <Input
+          className='bc_input'
           value={num}
           onChange={(e) => { setNum(e.target.value) }} />
-        <button className='bc-btn' onClick={Convert}>
+        <Button type='primary' className='bc_btn' onClick={Convert}>
           点击
-        </button>
+        </Button>
       </div>
       <h3>进制转换结果表</h3>
       <div className='bc-result'>
-        <table className='res-tab'>
-          <thead>
-            <tr>
-              <td>进制</td>
-              <td>结果</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>二进制</td>
-              <td>{num2}</td>
-            </tr>
-            <tr>
-              <td>八进制</td>
-              <td>{num8}</td>
-            </tr>
-            <tr>
-              <td>十进制</td>
-              <td>{num10}</td>
-            </tr>
-            <tr>
-              <td>十六进制</td>
-              <td>{num16}</td>
-            </tr>
-            <tr>
-              <td>三十六进制</td>
-              <td>{num36}</td>
-            </tr>
-          </tbody>
-        </table>
+        <Table bordered dataSource={dataSource} columns={columns} pagination={false} />
       </div>
     </div>
   )

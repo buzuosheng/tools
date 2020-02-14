@@ -1,26 +1,14 @@
-.toDay-btn {
+
+.toDay_btn {
   margin: 0 2rem;
-  padding: 5px 10px;
   width: 80px;
-  border: none;
-  border-radius: 3px;
-  background-color: #00a3cf;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
 }
 
-.toDate-btn {
+.toDate_btn {
   margin: 0 2rem;
-  padding: 5px 10px;
   width: 80px;
-  border: none;
-  border-radius: 3px;
-  background-color: #00a3cf;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
 }
+
 
 .datec-container{
   display: flex;
@@ -28,7 +16,8 @@
   text-align: left;
 }
 
-.date-input,.day-input {
+.date_input,.day_input {
+  width: 160px;
   margin-left: .5rem;
 }
 

@@ -1,12 +1,6 @@
-.md5-btn{
-  padding: 5px 10px;
+
+.md5_btn {
   width: 80px;
-  border: none;
-  border-radius: 3px;
-  background-color: #00a3cf;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
 }
 
 .md5-container {
@@ -20,9 +14,3 @@
   margin: .5rem 0;
 }
 
-.md5-result {
-  padding: .5rem;
-  width: 66%;
-  height: 4rem;
-  border: 1px solid #ccc;
-}

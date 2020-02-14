@@ -1,12 +1,6 @@
-.morse-btn{
-  padding: 5px 10px;
+
+.morse_btn {
   width: 80px;
-  border: none;
-  border-radius: 3px;
-  background-color: #00a3cf;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
 }
 
 .morse-container textarea {

@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 import dayjs from 'dayjs'
-import './index.css'
 import parser from 'cron-parser'
 import Helmet from 'react-helmet'
+import { Button, Input, List } from 'antd'
+
+import './index.css'
 
 const Cron: React.FC = () => {
 
@@ -21,7 +23,6 @@ const Cron: React.FC = () => {
         arr.push(dayjs(time).format('YYYY-MM-DD HH:mm:ss'))
       }
       setResult(arr)
-      console.log(result)
 
     } catch (err) {
       console.log('Error: ' + err.message);
@@ -36,24 +37,24 @@ const Cron: React.FC = () => {
         <meta name='keywords' content="工具,cron,crontab,定时,执行时间,前端,在线" />>
       </Helmet>
       <div>CRON表达式：
-      <input
-          className='cron-input'
-          value={value}
-          onChange={(e) => { setValue(e.target.value) }} />
-        <button className='cron-btn' onClick={handleClick}>
+        <Input className='cron_input' value={value} onChange={(e) => setValue(e.target.value)} />
+        <Button type='primary' className='cron_btn' onClick={handleClick}>
           点击
-        </button>
+        </Button>
       </div>
-      <h3>程序接下来五次执行的时间</h3>
       <div className='cron-result'>
-        <ul className="list-group">
-          {result.map((date, index) => {
-            return (
-              <li className='list-group-item' key={index} >{date}</li>
-            )
-          })}
-        </ul>
+        <List
+          header={<div>接下来五次的执行时间</div>}
+          bordered
+          dataSource={result}
+          renderItem={item => (
+            <List.Item>
+              {item}
+            </List.Item>
+          )}
+        />
       </div>
+
     </div>
   )
 }

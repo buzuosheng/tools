@@ -2,6 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import dayjs from 'dayjs'
 import Helmet from 'react-helmet'
+import {Button, Input} from 'antd';
 import './index.css'
 
 
@@ -35,17 +36,18 @@ const DateConvert: React.FC = () => {
         </div>
         <div className='date-wrap'>
           时间戳(s)：
-          <input
-            className='day-input'
+          <Input
+            className='day_input'
             value={date}
             onChange={(e) => setDate(e.target.value) }
           />
-          <button
-            className='toDate-btn' 
+          <Button
+            type='primary'
+            className='toDate_btn' 
             onClick={ () => setDateRes(date) }
           >
             转换
-          </button>
+          </Button>
           <div 
             className='date-result'>
             {date ? dayjs(new Date(parseInt(dateRes) * 1000)).format('YYYY-MM-DD HH:mm:ss') : ''}
@@ -54,15 +56,17 @@ const DateConvert: React.FC = () => {
         </div>
         <div className='date-wrap'>
           北京时间：
-          <input className='date-input' 
+          <Input 
+            className='date_input' 
             value={time}
             onChange={ (e) => {setTime(e.target.value)}}
           />
-          <button 
-            className='toDay-btn' 
+          <Button 
+            type='primary'
+            className='toDay_btn' 
             onClick={() => { setTimeRes(time)} } 
           >转换
-          </button>
+          </Button>
           <div 
             className='date-result'>
             {time ? dayjs(new Date(timeRes)).unix() : ''}

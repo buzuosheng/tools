@@ -1,0 +1,58 @@
+.qr_Control {
+  border: 1px solid #ccc;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.qr_main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.qr_result {
+  width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.qr_resultCode {
+  height: 400px;
+  width: 400px;
+}
+
+.qr_dloadbtn, .qr_clearbtn {
+  margin: 1rem;
+  width: 120px;
+}
+
+
+.qr_ctrlItem {
+  border-top: 1px solid #ccc;
+  padding: .5rem;
+}
+
+.qr_renderAs{
+  width: 180px
+}
+
+.qr_logoInpput{
+  width: 120px;
+}
+
+.qr_logoNumInpput {
+  width: 80px;
+}
+
+.qr_maintitle {
+  padding: .5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.qr_logotitle {
+  padding: .5rem;
+  font-weight: bold;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}

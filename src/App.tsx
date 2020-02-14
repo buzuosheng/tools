@@ -1,4 +1,5 @@
 import React from 'react'
+import 'antd/dist/antd.css'
 import './App.css';
 import { BrowserRouter as Router, Route, Link, useLocation } from 'react-router-dom'
 
@@ -9,6 +10,7 @@ import Home from './components/Home'
 import Base64 from './components/Base64'
 import BinaryConvert from './components/BinaryConvert'
 import DateConvert from './components/DateConvert'
+import Qrcode from './components/Qrcode'
 
 import logo from './logo.jpg'
 
@@ -27,6 +29,7 @@ const Header: React.FC = () => {
       <Link to='/base64' className={location.pathname === '/base64' ? 'active' : ''}>Base64</Link>
       <Link to='/binaryconvert' className={location.pathname === '/binaryconvert' ? 'active' : ''}>进制转换</Link>
       <Link to='/dateconvert' className={location.pathname === '/dateconvert' ? 'active' : ''}>时间戳转换</Link>
+      <Link to='/qrcode' className={location.pathname === '/qrcode' ? 'active' : ''}>生成二维码</Link>
     </div>
   )
 }
@@ -45,6 +48,7 @@ const App: React.FC = () => {
         <Route path='/base64' component={Base64} />
         <Route path='/binaryconvert' component={BinaryConvert} />
         <Route path='/dateconvert' component={DateConvert} />
+        <Route path='/qrcode' component={Qrcode} />
       </Router>
     </div>
   )

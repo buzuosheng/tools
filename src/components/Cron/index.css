@@ -1,36 +1,20 @@
-.cron-btn {
+
+.cron_btn {
   margin-left: 2rem;
-  padding: 5px 10px;
   width: 80px;
-  border: none;
-  border-radius: 3px;
-  background-color: #00a3cf;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
 }
 
 .cron-container{
   text-align: left;
 }
 
-.cron-input {
+.cron_input {
   margin-left: .5rem;
+  width: 150px;
 }
 
-ul.list-group {
-  text-align: left;
-  margin:0 auto;
-  margin-bottom:10px;
-  border:solid #ccc;
-}
-
-li.list-group-item {
-  padding:10px;
-  margin:0;
-  border-width:1px
-}
 
 .cron-result {
   width: 66%;
+  margin-top: 1rem;
 }
