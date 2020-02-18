@@ -1,46 +1,40 @@
 import React from 'react';
-import {Table} from 'antd'
+import { Table } from 'antd'
 import 'antd/dist/antd.css'
+import './test.css'
 
-const Test:React.FC = () => {
+const Test: React.FC = () => {
+
   const dataSource = [
     {
       key: '1',
-      name: '二进制',
-      result: 'num2'
+      name: '胡彦斌',
+      age: 32,
+      address: '西湖区湖底公园1号',
     },
     {
       key: '2',
-      name: '八进制',
-      result: 'num8'
-    },
-    {
-      key: '3',
-      name: '十进制',
-      result: 'num10'
-    },
-    {
-      key: '4',
-      name: '十六进制',
-      result: 'num16'
-    },
-    {
-      key: '5',
-      name: '三十六进制',
-      result: 'num36'
+      name: '胡彦祖',
+      age: 42,
+      address: '西湖区湖底公园1号',
     },
   ];
   
   const columns = [
     {
-      title: '进制',
+      title: '姓名',
       dataIndex: 'name',
       key: 'name',
     },
     {
-      title: '结果',
-      dataIndex: 'result',
-      key: 'result',
+      title: '年龄',
+      dataIndex: 'age',
+      key: 'age',
+    },
+    {
+      title: '住址',
+      dataIndex: 'address',
+      key: 'address',
     },
   ];
 

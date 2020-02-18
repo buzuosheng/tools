@@ -11,6 +11,8 @@ import Base64 from './components/Base64'
 import BinaryConvert from './components/BinaryConvert'
 import DateConvert from './components/DateConvert'
 import Qrcode from './components/Qrcode'
+import Regex from './components/Regex'
+import IpSearch from './components/IpSearch'
 
 import logo from './logo.jpg'
 
@@ -29,7 +31,9 @@ const Header: React.FC = () => {
       <Link to='/base64' className={location.pathname === '/base64' ? 'active' : ''}>Base64</Link>
       <Link to='/binaryconvert' className={location.pathname === '/binaryconvert' ? 'active' : ''}>进制转换</Link>
       <Link to='/dateconvert' className={location.pathname === '/dateconvert' ? 'active' : ''}>时间戳转换</Link>
-      <Link to='/qrcode' className={location.pathname === '/qrcode' ? 'active' : ''}>生成二维码</Link>
+      <Link to='/qrcode' className={location.pathname === '/qrcode' ? 'active' : ''}>二维码生成器</Link>
+      <Link to='/regex' className={location.pathname === '/regex' ? 'active' : ''}>正则测试</Link>
+      <Link to='/ipsearch' className={location.pathname === '/ipsearch' ? 'active' : ''}>IP地址查询</Link>
     </div>
   )
 }
@@ -49,6 +53,8 @@ const App: React.FC = () => {
         <Route path='/binaryconvert' component={BinaryConvert} />
         <Route path='/dateconvert' component={DateConvert} />
         <Route path='/qrcode' component={Qrcode} />
+        <Route path='/regex' component={Regex} />
+        <Route path='/ipsearch' component={IpSearch} />
       </Router>
     </div>
   )

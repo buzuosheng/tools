@@ -1,0 +1,13 @@
+.regex_btngroup {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.regex_tips {
+  margin-top: 1rem;
+}
+
+.regex_main {
+  margin-top: 1rem;
+}

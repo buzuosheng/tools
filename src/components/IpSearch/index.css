@@ -1,0 +1,17 @@
+.ipsearch_main {
+  margin-top: 1rem;
+}
+
+.ipsearch_input {
+  width: 200px;
+}
+
+.ipsearch_btn {
+  width: 80px;
+  margin-left: 1rem;
+}
+
+.ipsearch_result {
+  margin-top: 1rem;
+  width: 66%;
+}

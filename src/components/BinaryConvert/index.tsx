@@ -56,11 +56,13 @@ const BinaryConvert: React.FC = () => {
       title: '进制',
       dataIndex: 'name',
       key: 'name',
+      width: 50
     },
     {
       title: '结果',
       dataIndex: 'result',
       key: 'result',
+      width: 50
     },
   ];
 
