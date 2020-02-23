@@ -1,7 +1,9 @@
 .regex_btngroup {
   margin-top: 1rem;
+  padding-bottom: .5rem;
   display: flex;
   flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
 }
 
 .regex_tips {
@@ -10,4 +12,12 @@
 
 .regex_main {
   margin-top: 1rem;
+}
+
+.regex_btn {
+  margin-left: 1rem;
+}
+
+.regex_regInput {
+  width: 60%;
 }

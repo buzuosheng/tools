@@ -25,8 +25,9 @@ const IpSearch: React.FC = () => {
   const [lon, setLon] = useState('')
   const [ipres, setIpres] = useState('')
 
+
   const getData = async () => {
-    const response = await axios.get('http://ip-api.com/json/?lang=zh-CN')
+    const response = await axios.get('https://ip-api.com/json/?lang=zh-CN')
     setIpres(response.data.query)
     setAdd(response.data.country + ' ' + response.data.regionName)
     setOrg(response.data.org)
@@ -35,13 +36,14 @@ const IpSearch: React.FC = () => {
   }
 
   const handleGetData = async () => {
-    const response = await axios.get('http://ip-api.com/json/' + ip + '?lang=zh-CN')
+    const response = await axios.get('https://ip-api.com/json/' + ip + '?lang=zh-CN')
     setIpres(response.data.query)
     setAdd(response.data.country + ' ' + response.data.regionName)
     setOrg(response.data.org)
     setLat(response.data.lat)
     setLon(response.data.lon)
   }
+
 
   useEffect(
     () => {
