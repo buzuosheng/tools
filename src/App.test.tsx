@@ -4,7 +4,8 @@ import { Input, Button, Table } from 'antd'
 import { useState, useEffect } from 'react'
 
 import './index.css'
-//  111.53.146.205
+//淘宝api http://ip.taobao.com/service/getIpInfo.php?ip=
+//测试ip  111.53.146.205
 const IpSearch: React.FC = () => {
 
   const ipToNum = (ip: string) => {
@@ -18,7 +19,7 @@ const IpSearch: React.FC = () => {
     }
   }
 
-  const [ip, setIp] = useState('')
+  const [ip, setIp] = useState('111.53.146.205')
   const [add, setAdd] = useState('')
   const [org, setOrg] = useState('')
   const [lat, setLat] = useState('')
@@ -27,22 +28,23 @@ const IpSearch: React.FC = () => {
 
 
   const getData = async () => {
-    const response = await axios.get('http://ip-api.com/json/?lang=zh-CN')
-    setIpres(response.data.query)
-    setAdd(response.data.country + ' ' + response.data.regionName)
-    setOrg(response.data.org)
-    setLat(response.data.lat)
-    setLon(response.data.lon)
+    const response = await axios.get('http://ip.taobao.com/service/getIpInfo.php?ip=' + ip )
+    console.log(response.data)
+    // setIpres(response.data.query)
+    // setAdd(response.data.country + ' ' + response.data.regionName)
+    // setOrg(response.data.org)
+    // setLat(response.data.lat)
+    // setLon(response.data.lon)
   }
 
-  const handleGetData = async () => {
-    const response = await axios.get('http://ip-api.com/json/' + ip + '?lang=zh-CN')
-    setIpres(response.data.query)
-    setAdd(response.data.country + ' ' + response.data.regionName)
-    setOrg(response.data.org)
-    setLat(response.data.lat)
-    setLon(response.data.lon)
-  }
+  // const handleGetData = async () => {
+  //   const response = await axios.get('http://ip-api.com/json/' + ip + '?lang=zh-CN')
+  //   setIpres(response.data.query)
+  //   setAdd(response.data.country + ' ' + response.data.regionName)
+  //   setOrg(response.data.org)
+  //   setLat(response.data.lat)
+  //   setLon(response.data.lon)
+  // }
 
 
   useEffect(
@@ -61,7 +63,7 @@ const IpSearch: React.FC = () => {
       />
       <Button
         type='primary'
-        onClick={handleGetData}
+        // onClick={handleGetData}
         className='ipsearch_btn'>
         查询
       </Button>
