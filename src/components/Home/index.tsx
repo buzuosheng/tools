@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet'
 
 import cron from './image/cron.jpg'
 import md5 from './image/md5.jpg'

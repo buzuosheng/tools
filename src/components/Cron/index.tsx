@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import dayjs from 'dayjs'
 import parser from 'cron-parser'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { Button, Input, List } from 'antd'
 
 import './index.css'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './index.css'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { Input, Button,Table } from 'antd'
 
 const BinaryConvert: React.FC = () => {

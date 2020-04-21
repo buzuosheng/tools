@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import md5 from 'md5'
 import './index.css'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import {Input,Button} from 'antd'
 
 const Md5: React.FC = () => {

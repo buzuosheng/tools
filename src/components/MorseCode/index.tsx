@@ -2,7 +2,7 @@ import React from 'react'
 import './index.css'
 import { useState } from 'react'
 import {Input, Button} from 'antd'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 const morse = require('morse')
 
 //event:React.MouseEvent<HTMLButtonElement, MouseEvent>

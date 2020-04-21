@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import dayjs from 'dayjs'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import {Button, Input} from 'antd';
 import './index.css'
 
