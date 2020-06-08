@@ -85,11 +85,10 @@ const Qrcode: React.FC = () => {
             type="primary"
             icon="download"
             disabled={true}>
-            Download
           </Button>
           <Button
             className='qr_clearbtn'
-            type="danger"
+            danger
             ghost
             onClick={handleClear}>
             Clear
