@@ -18,8 +18,14 @@
   align-items: center;
 }
 
+a:hover {
+  color: #1900FF;
+  text-shadow: 0 0 0.5px #1900FF;
+}
+
 a.active {
-  border-bottom: 3px solid #551A8B;
+  color: #1900FF;
+  border-bottom: 3px solid #1900FF;
 }
 
 .App.main {
