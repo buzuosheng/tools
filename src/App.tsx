@@ -38,6 +38,14 @@ const Header: React.FC = () => {
   )
 }
 
+const Footer: React.FC = () => {
+  return(
+    <div>
+      {/* 134123412351 */}
+    </div>
+  )
+}
+
 const App: React.FC = () => {
   console.log(window.location.pathname)
 
@@ -55,6 +63,7 @@ const App: React.FC = () => {
         <Route path='/qrcode' component={Qrcode} />
         <Route path='/regex' component={Regex} />
         <Route path='/ipsearch' component={IpSearch} />
+        <Footer></Footer>
       </Router>
     </div>
   )
