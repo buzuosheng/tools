@@ -9,8 +9,9 @@
 
 .header a {
   margin: 0 1rem;
-  color: #551A8B;
+  color: #8590A6;
   text-decoration: none;
+  /* font-size: 16px; */
   display: flex;
   height: 50px;
   line-height: 50px;
@@ -18,14 +19,15 @@
   align-items: center;
 }
 
-a:hover {
-  color: #1900FF;
-  text-shadow: 0 0 0.5px #1900FF;
+.header a:hover {
+  color: #444444;
+  text-shadow: 0 0 0.5px #444444;
 }
 
-a.active {
-  color: #1900FF;
-  border-bottom: 3px solid #1900FF;
+.header a.active {
+  color: #444444;
+  text-shadow: 0 0 0.5px #444444;
+  border-bottom: 3px solid #0084FF;
 }
 
 .App.main {
