@@ -5,7 +5,7 @@ import { InputNumber, Checkbox, Select, Input, Slider } from 'antd';
 const QrControl: React.FC<{
   valueChange: (value: string) => void,
   renderAsChange: (renderAs: "canvas") => void,
-  sizeChange: (size: any) => void,
+  sizeChange: (size: number) => void,
   bgColorChange: (bgColor: string) => void,
   fgColorChange: (fgColor: string) => void,
   levelChange: (level: "H" | "Q" | "M" | "L") => void,
@@ -15,14 +15,14 @@ const QrControl: React.FC<{
   widthChange: (height: number) => void,
   value: string,
   renderAs: "canvas",
-  size: any,
+  size: number,
   bgColor: string,
   fgColor: string,
   level: "H" | "Q" | "M" | "L",
   ifMar: boolean,
   src: string,
-  height: any,
-  width: any,
+  height: number,
+  width: number,
 }> = ({
   value,
   renderAs,
@@ -77,7 +77,7 @@ const QrControl: React.FC<{
             min={100}
             max={400}
             value={size}
-            onChange={(value) => { if (typeof (value) == 'number') { sizeChange(value) } }}
+            onChange={(value: any) => { if (typeof (value) == 'number') { sizeChange(value) } }}
           />
         </div>
         {/* 二维码颜色 fgColor */}
@@ -186,7 +186,7 @@ const QrControl: React.FC<{
             defaultValue={10}
             min={1} max={30}
             value={height}
-            onChange={(value) => { if (typeof (value) == 'number') { heightChange(value) } }} />
+            onChange={(value: any) => { if (typeof (value) == 'number') { heightChange(value) } }} />
         </div>
         {/* 宽度 width */}
         <div className='qr_ctrlItem'>
@@ -197,7 +197,7 @@ const QrControl: React.FC<{
             min={1}
             max={30}
             value={width}
-            onChange={(value) => { if (typeof (value) == 'number') { widthChange(value) } }} />
+            onChange={(value: any) => { if (typeof (value) == 'number') { widthChange(value) } }} />
         </div>
       </div>
     )
