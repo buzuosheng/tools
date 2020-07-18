@@ -77,8 +77,6 @@ const QrControl: React.FC<{
             min={100}
             max={400}
             value={size}
-            // range
-            // onChange={(value) => { if (typeof (value) == 'number') { sizeChange(value) } }}
           />
         </div>
         {/* 二维码颜色 fgColor */}
