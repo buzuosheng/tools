@@ -5,7 +5,7 @@ import { InputNumber, Checkbox, Select, Input, Slider } from 'antd';
 const QrControl: React.FC<{
   valueChange: (value: string) => void,
   renderAsChange: (renderAs: "canvas") => void,
-  sizeChange: (size: number) => void,
+  sizeChange: (size: any) => void,
   bgColorChange: (bgColor: string) => void,
   fgColorChange: (fgColor: string) => void,
   levelChange: (level: "H" | "Q" | "M" | "L") => void,
@@ -15,14 +15,14 @@ const QrControl: React.FC<{
   widthChange: (height: number) => void,
   value: string,
   renderAs: "canvas",
-  size: number,
+  size: any,
   bgColor: string,
   fgColor: string,
   level: "H" | "Q" | "M" | "L",
   ifMar: boolean,
   src: string,
-  height: number,
-  width: number,
+  height: any,
+  width: any,
 }> = ({
   value,
   renderAs,
@@ -77,6 +77,7 @@ const QrControl: React.FC<{
             min={100}
             max={400}
             value={size}
+            onChange={(value) => { if (typeof (value) == 'number') { sizeChange(value) } }}
           />
         </div>
         {/* 二维码颜色 fgColor */}
