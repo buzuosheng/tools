@@ -78,7 +78,7 @@ const QrControl: React.FC<{
             max={400}
             value={size}
             // range
-            onChange={(value) => { if (typeof (value) == 'number') { sizeChange(value) } }}
+            // onChange={(value) => { if (typeof (value) == 'number') { sizeChange(value) } }}
           />
         </div>
         {/* 二维码颜色 fgColor */}
@@ -162,7 +162,7 @@ const QrControl: React.FC<{
         {/* x坐标 x */}
         <div className='qr_ctrlItem'>
           x坐标：
-        <InputNumber 
+        <InputNumber
           className='qr_logoNumInpput'
           min={0}
           max={10}
@@ -176,7 +176,7 @@ const QrControl: React.FC<{
           className='qr_logoNumInpput'
           min={0}
           max={10}
-          defaultValue={0} 
+          defaultValue={0}
           disabled={true} />
         </div>
         {/* 高度 height */}
