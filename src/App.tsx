@@ -1,6 +1,7 @@
 import React from 'react'
 import 'antd/dist/antd.css'
 import './App.css';
+import WeChat from './WeChat.jpg'
 import { BrowserRouter as Router, Route, Link, useLocation } from 'react-router-dom'
 
 import Cron from './components/Cron';
@@ -52,6 +53,7 @@ const App: React.FC = () => {
   return (
     <div className='App main'>
       <Router>
+        <img className="WeChat" alt="微信公众号-前端大合集" src={WeChat} />
         <Header></Header>
         <Route path='/' exact component={Home} />
         <Route path='/cron' component={Cron} />
