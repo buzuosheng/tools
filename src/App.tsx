@@ -14,17 +14,14 @@ import DateConvert from './components/DateConvert'
 import Qrcode from './components/Qrcode'
 import Regex from './components/Regex'
 import IpSearch from './components/IpSearch'
-
-import logo from './logo.jpg'
+import Icon from './Icon';
 
 const Header: React.FC = () => {
   const location = useLocation()
 
   return (
     <div className="header">
-      <Link to='/'>
-        <img src={logo} alt='前端武器库'></img>
-      </Link>
+      <Icon />
       <Link to='/' className={location.pathname === '/' ? 'active' : ''}>首页</Link>
       <Link to='/cron' className={location.pathname === '/cron' ? 'active' : ''}>Cron</Link>
       <Link to='/md5' className={location.pathname === '/md5' ? 'active' : ''}>MD5</Link>
@@ -39,21 +36,13 @@ const Header: React.FC = () => {
   )
 }
 
-const Footer: React.FC = () => {
-  return(
-    <div>
-      {/* 134123412351 */}
-    </div>
-  )
-}
-
 const App: React.FC = () => {
   console.log(window.location.pathname)
 
   return (
-    <div className='App main'>
+    <div className='app_main'>
       <Router>
-        <img className="WeChat" alt="微信公众号-前端大合集" src={WeChat} />
+
         <Header></Header>
         <Route path='/' exact component={Home} />
         <Route path='/cron' component={Cron} />
@@ -65,7 +54,7 @@ const App: React.FC = () => {
         <Route path='/qrcode' component={Qrcode} />
         <Route path='/regex' component={Regex} />
         <Route path='/ipsearch' component={IpSearch} />
-        <Footer></Footer>
+        <img className="WeChat" alt="微信公众号-前端大合集" src={WeChat} />
       </Router>
     </div>
   )

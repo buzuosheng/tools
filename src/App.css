@@ -5,6 +5,7 @@
   border-bottom: 1px solid #ccc;
   align-items: center;
   height: 50px;
+  overflow: hidden;
 }
 
 .WeChat {
@@ -26,6 +27,7 @@
   text-decoration: none;
   /* font-size: 16px; */
   display: flex;
+  flex-wrap: wrap;
   height: 50px;
   line-height: 50px;
   justify-content: center;
@@ -43,7 +45,7 @@
   border-bottom: 3px solid #0084FF;
 }
 
-.App.main {
+.app_main {
   width: 960px;
   margin: 0 auto;
 }
@@ -70,5 +72,57 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 339px) {
+  .app_main {
+    width: 100vw;
+  }
+
+  .list {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .tool {
+    margin: 0;
+  }
+}
+
+@media (min-width: 340px) {
+  .app_main {
+    max-width: 320px;
+  }
+
+  .tool {
+    margin: 0;
+  }
+
+  .list {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 630px) {
+
+  .app_main {
+    max-width: 630px;
+  }
+
+  .header {
+    max-width: 630px;
+  }
+}
+
+
+@media (min-width: 972px) {
+  .app_main {
+    max-width: 940px;
+  }
+
+  .header {
+    max-width: 960px;
   }
 }
