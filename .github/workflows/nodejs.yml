@@ -14,8 +14,7 @@ jobs:
       # 切代码到runner
       - run: |
         node -v
-      - run: |
-        free -h
+      - run: free -h
       - run: ls -lah
       - uses: actions/checkout@v1
         with:
