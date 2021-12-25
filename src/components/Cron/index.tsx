@@ -15,7 +15,7 @@ const Cron: React.FC = () => {
 
   const handleClick = () => {
     try {
-      let interval = parser.parseExpression(value);
+      let interval = parser.parseExpression(value)
 
       let arr: string[] = []
       for (let i = 0; i < 5; i++) {
@@ -23,9 +23,12 @@ const Cron: React.FC = () => {
         arr.push(dayjs(time).format('YYYY-MM-DD HH:mm:ss'))
       }
       setResult(arr)
-
-    } catch (err) {
-      console.log('Error: ' + err.message);
+    } catch (err) { // TODO
+      let errmsg = 'failed to parse'
+      if (err instanceof Error) {
+        errmsg = err.message
+      }
+      console.log('Error: ' + errmsg)
     }
 
   }
@@ -34,7 +37,7 @@ const Cron: React.FC = () => {
       <Helmet>
         <title>crontab时间计算 - 前端武器库</title>
         <meta name="description" content="计算定时任务的执行时间" />
-        <meta name='keywords' content="工具,cron,crontab,定时,执行时间,前端,在线" />>
+        <meta name='keywords' content="工具,cron,crontab,定时,执行时间,前端,在线" />
       </Helmet>
       <div>CRON表达式：
         <Input className='cron_input' value={value} onChange={(e) => setValue(e.target.value)} />

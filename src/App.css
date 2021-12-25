@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.min.css';
+
 .header {
   display: flex;
   margin-bottom: 1rem;
